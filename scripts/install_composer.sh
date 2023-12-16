@@ -50,7 +50,7 @@ echo "- setting up composer environment"
 if [[ $(conda info --envs | grep "composer" | awk '{print $1}') != "composer" ]]; then
     read -p "conda environment of name 'composer' already exists! Would you like to remove this environment and continue (Y/[N])? " -n 1 -r
     echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]] then
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
         exit
     fi
 
